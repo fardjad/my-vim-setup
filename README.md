@@ -10,7 +10,7 @@ This is how I have setup Vim on my Windows machine. I'm writing this just for my
 2.  [Install Vundle][2] (skip editing **.vimrc** for now)
 3.  *[Optional]* Install [Link Shell Extension][3]
 4.  Clone the repository and copy (create symlinks to) **.vimrc** and 
-    **.vim/** in (to) your home directory
+    **.vim/** to (in) your home directory
 5.  Install [this][4] patched **Source Code Pro** font
 6.  Download [HTML Tidy][5] and put it in your **PATH**
 7.  Download and install [LLVM][6]
