@@ -15,8 +15,8 @@ This is how I have setup Vim on my Windows machine. I'm writing this just for my
 5.  Install [this][4] patched **Source Code Pro** font
 6.  Download [HTML Tidy][5] and put it in your **PATH**
 7.  Download and install [LLVM][6]
-8.  Install [Microsoft Visual C++ Build Tools][7] (No need to install Windows 
-	SDKs)
+8.  Install [Microsoft Visual C++ Build Tools][7] (Install Windows 
+	10 SDK only)
 9.  Have Vundle install plugins for you:
     `gvim +PluginInstall +qall`
 10. `choco install editorconfig.core ctags python2 python3 nodejs cmake`
