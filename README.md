@@ -21,11 +21,11 @@ I'm also using it for pretty much everything else.
 	10 SDK only)
 9.  Have Vundle install plugins for you:
     `gvim +PluginInstall +qall`
-10. `choco install editorconfig.core ctags python3 nodejs`
+10. `choco install editorconfig.core ctags nodejs`
 11. `choco install python2 --version 2.7.10` **2.7.11** doesn't work with the 
     current release of Vim. Also Make sure to put **python2** executable 
     in path environment variable before **python3**
-12. *[Optional]* `choco install cmake 7zip`
+12. *[Optional]* `choco install cmake 7zip python3`
 13. *[Optional]* Download [Lua 5.2.x x64][8] and put it in your PATH
 14. `npm install -g csslint editorconfig jshint typescript`
 15. `npm install -g git+https://github.com/ramitos/jsctags.git`
