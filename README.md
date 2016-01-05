@@ -2,7 +2,9 @@
 
 ## Synopsis
 
-This is how I have setup Vim on my Windows machine. I'm writing this just for my own future reference. Current setup is configured for Web Development but I'm also using it for pretty much everything else.
+This is how I have setup Vim on my Windows machine. I'm writing this just for 
+my own future reference. Current setup is configured for Web Development but 
+I'm also using it for pretty much everything else.
 
 ## Instructions
 
@@ -19,12 +21,17 @@ This is how I have setup Vim on my Windows machine. I'm writing this just for my
 	10 SDK only)
 9.  Have Vundle install plugins for you:
     `gvim +PluginInstall +qall`
-10. `choco install editorconfig.core ctags python2 python3 nodejs cmake`
-11. *[Optional]* `choco install ruby 7zip`
-12. *[Optional]* Install [Lua][8]
-13. `npm install -g csslint editorconfig jshint typescript`
-14. `npm install -g git+https://github.com/ramitos/jsctags.git`
-15. Follow [YouCompleteMe][9] full installation guide
+10. `choco install editorconfig.core ctags python3 nodejs`
+11. `choco install python2 --version 2.7.10` **2.7.11** doesn't work with the 
+    current release of Vim. Also Make sure to put **python2** executable 
+    in path environment variable before **python3**
+12. *[Optional]* `choco install cmake 7zip`
+13. *[Optional]* Download [Lua 5.2.x x64][8] and put it in your PATH
+14. `npm install -g csslint editorconfig jshint typescript`
+15. `npm install -g git+https://github.com/ramitos/jsctags.git`
+16. Follow [YouCompleteMe][9] Windows installation guide (Just ignore the part 
+    that referes to full installation instructions.) Make sure to pass 
+    **--clang-completer** and **--tern-completer** flags to **setup.py**
 
 [1]: https://chocolatey.org/
 [2]: http://schinagl.priv.at/nt/hardlinkshellext/hardlinkshellext.html
@@ -33,10 +40,11 @@ This is how I have setup Vim on my Windows machine. I'm writing this just for my
 [5]: http://binaries.html-tidy.org/
 [6]: http://llvm.org/releases/download.html
 [7]: https://www.microsoft.com/en-us/download/details.aspx?id=49983
-[8]: https://github.com/rjpcomputing/luaforwindows/releases
+[8]: http://luabinaries.sourceforge.net/
 [9]: https://github.com/Valloric/YouCompleteMe
 
 ## License
 
-This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. 
-To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.
+This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 
+International License. To view a copy of this license, 
+visit http://creativecommons.org/licenses/by-sa/4.0/.
