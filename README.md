@@ -2,16 +2,19 @@
 
 ## Synopsis
 
-This is how I have setup Vim on my Windows machine. I'm writing this just for 
-my own future reference. Current setup is configured for Web Development but 
-I'm also using it for pretty much everything else.
+This is how I have setup Vim on my Windows machine. Current setup is 
+configured for Web Development but I'm also using it for pretty much 
+everything else. I'm also using these config files on a Mac machine from time 
+to time and it works as expected. I'll do my best keep thing cross-platform.
 
 ## Instructions
 
 1.  Download and install `vim-x64` via [Chocolatey][1]
 2.  *[Optional]* Install [Link Shell Extension][2]
-3.  Clone the repository and copy (create symlinks to) **.vimrc** and 
-    **.vim\** to (in) your home directory
+3.  Clone the repository and create symlinks to **.vimrc** and 
+    **.vim\** in your home directory. You will also need to create a 
+    symlink named **vimfiles** to **.vim\** in your home directory (this is 
+    required for python imports to work in *UltiSnip* snippets)
 4.  [Install Vundle][3] to **%USERPROFILE%\\.vim\bundle** (copy 
 	**misc/curl.cmd** to your git cmd directory, and skip editing **.vimrc**)
 5.  Install [this][4] patched **Source Code Pro** font
@@ -48,3 +51,4 @@ I'm also using it for pretty much everything else.
 This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 
 International License. To view a copy of this license, 
 visit http://creativecommons.org/licenses/by-sa/4.0/.
+

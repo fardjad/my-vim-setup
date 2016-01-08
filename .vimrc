@@ -22,6 +22,8 @@ Plugin 'myint/syntastic-extras'
 Plugin 'vim-scripts/YankRing.vim'
 Plugin 'majutsushi/tagbar'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'SirVer/ultisnips'
+Plugin 'ervandew/supertab'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'sjl/vitality.vim' " OS X
 
@@ -223,4 +225,20 @@ let g:EasyMotion_smartcase = 1
 " JK motions: Line motions
 map <Leader>j <Plug>(easymotion-j)
 map <Leader>k <Plug>(easymotion-k)
+
+" snippets
+" https://medium.com/brigade-engineering/sharpen-your-vim-with-snippets-767b693886db
+" YouCompleteMe and UltiSnips compatibility, with the helper of supertab
+" (via http://stackoverflow.com/a/22253548/1626737)
+let g:SuperTabDefaultCompletionType = '<C-n>'
+let g:SuperTabCrMapping = 0
+let g:UltiSnipsExpandTrigger = '<tab>'
+let g:UltiSnipsJumpForwardTrigger = '<tab>'
+let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
+let g:ycm_key_list_select_completion = ['<C-j>', '<C-n>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<C-k>', '<C-p>', '<Up>']
+
+" UltiSnip snippets directory
+let g:UltiSnipsSnippetsDir = $HOME.'/.vim/UltiSnips'
+let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/UltiSnips']
 

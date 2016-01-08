@@ -76,3 +76,5 @@ Temporary Items
 ### Bundle ###
 .vim/bundle
 
+### Python ###
+*.pyc
