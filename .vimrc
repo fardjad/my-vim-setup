@@ -115,12 +115,20 @@ set encoding=utf-8 " also fixes powerline symbols on Windows
 if has("gui_running")
   if has("gui_macvim")
     set guifont=Source\ Code\ Pro\ for\ Powerline:h13
+    " window size
+    set lines=36
+    set columns=150
+  elseif has("gui_gtk2")
+    set guifont=Source\ Code\ Pro\ for\ Powerline\ 12
+    " window size
+    set lines=28
+    set columns=112
   else
     set guifont=Sauce\ Code\ Powerline:h10
+    " window size
+    set lines=36
+    set columns=150
   endif
-  " window size
-  set lines=36
-  set columns=150
 endif
 
 " emmet
@@ -241,4 +249,7 @@ let g:ycm_key_list_previous_completion = ['<C-k>', '<C-p>', '<Up>']
 " UltiSnip snippets directory
 let g:UltiSnipsSnippetsDir = $HOME.'/.vim/UltiSnips'
 let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/UltiSnips']
+
+" Disable cursor blinking
+set guicursor+=a:blinkon0
 
