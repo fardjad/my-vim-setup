@@ -25,6 +25,7 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'SirVer/ultisnips'
 Plugin 'ervandew/supertab'
 Plugin 'easymotion/vim-easymotion'
+Plugin 'posva/vim-vue'
 Plugin 'sjl/vitality.vim' " OS X
 
 " All of your Plugins must be added before the following line
