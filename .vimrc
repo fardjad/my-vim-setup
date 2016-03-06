@@ -51,6 +51,18 @@ augroup reload_vimrc " {
   autocmd BufWritePost $MYVIMRC source $MYVIMRC
 augroup END " }
 
+" show the right margin
+set colorcolumn=80
+
+" disable wordwrap
+set nowrap
+
+" make more room
+set guioptions-=m  "remove menu bar
+set guioptions-=T  "remove toolbar
+set guioptions-=r  "remove right-hand scroll bar
+set guioptions-=L  "remove left-hand scroll bar
+
 " disable the annoying bell 
 set vb
 set t_vb=
