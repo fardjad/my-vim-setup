@@ -246,6 +246,10 @@ elseif has('unix')
   set clipboard=unnamedplus
 endif
 
+" leader
+" change the mapleader from \ to ,
+let mapleader=","
+
 " easymotion
 let g:EasyMotion_do_mapping = 0 " Disable default mappings
 
