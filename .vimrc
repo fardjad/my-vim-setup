@@ -29,6 +29,7 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'SirVer/ultisnips'
 Plugin 'ervandew/supertab'
 Plugin 'easymotion/vim-easymotion'
+Plugin 'takac/vim-hardtime'
 Plugin 'posva/vim-vue'
 Plugin 'sjl/vitality.vim' " OS X
 
@@ -224,15 +225,9 @@ set completeopt-=preview
 " enable mouse
 set mouse=a
 
-" https://tylercipriani.com/vim.html
-noremap <up> <nop>
-noremap <down> <nop>
-noremap <left> <nop>
-noremap <right> <nop>
-inoremap <down> <nop>
-inoremap <left> <nop>
-inoremap <right> <nop>
-inoremap <up> <nop>
+" give my self such a hardtime ;-)
+let g:hardtime_default_on=1
+let g:list_of_disabled_keys=['<UP>', '<DOWN>', '<LEFT>', '<RIGHT>']
 
 " quick resize (http://vim.wikia.com/wiki/Quick_window_resizing)
 " resize horzontal split window
