@@ -20,6 +20,9 @@ Plugin 'jlanzarotta/bufexplorer'
 Plugin 'scrooloose/syntastic'
 Plugin 'myint/syntastic-extras'
 Plugin 'vim-scripts/YankRing.vim'
+Plugin 'xolox/vim-misc'
+Plugin 'xolox/vim-shell'
+Plugin 'xolox/vim-easytags'
 Plugin 'majutsushi/tagbar'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'SirVer/ultisnips'
@@ -191,6 +194,25 @@ set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 set expandtab
+
+" easytags
+set cpoptions+=d
+set tags=.vimtags;,$HOME/.vim/.vimtags
+let g:easytags_file=$HOME.'/.vim/.vimtags'
+let g:easytags_dynamic_files=2
+let g:easytags_events=['BufWritePost']
+let g:easytags_async=0
+let g:easytags_resolve_links=1
+let g:easytags_include_members=1
+let g:easytags_languages={
+            \  'javascript': {
+            \     'cmd': 'jsctags',
+            \     'args': [],
+            \     'fileoutput_opt': '-f',
+            \     'stdout_opt': '-f-',
+            \     'recurse_flag': '-R'
+            \  }
+            \}
 
 " tagbar
 nmap <F8> :TagbarToggle<CR>
