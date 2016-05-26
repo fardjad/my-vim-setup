@@ -132,21 +132,15 @@ set encoding=utf-8 " also fixes powerline symbols on Windows
 " gui
 if has("gui_running")
   if has("gui_macvim")
-    set guifont=Source\ Code\ Pro\ for\ Powerline:h13
-    " window size
-    set lines=36
-    set columns=150
+    set guifont=Liberation\ Mono\ for\ Powerline:h12
   elseif has("gui_gtk2")
-    set guifont=Source\ Code\ Pro\ for\ Powerline\ 12
-    " window size
-    set lines=28
-    set columns=112
+    set guifont=Liberation\ Mono\ for\ Powerline\ 12
   else
-    set guifont=Sauce\ Code\ Powerline:h10
-    " window size
-    set lines=36
-    set columns=150
+    set guifont=Liberation Mono Powerline:h12
   endif
+  " window size
+  set lines=43
+  set columns=132
 endif
 
 " emmet
@@ -264,6 +258,10 @@ let g:EasyMotion_smartcase = 1
 " JK motions: Line motions
 map <Leader>j <Plug>(easymotion-j)
 map <Leader>k <Plug>(easymotion-k)
+
+" vim-shell
+" Disable default mappings (https://github.com/xolox/vim-shell#the-gshell_mappings_enabled-option)
+let g:shell_mappings_enabled = 0
 
 " snippets
 " https://medium.com/brigade-engineering/sharpen-your-vim-with-snippets-767b693886db

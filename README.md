@@ -2,12 +2,12 @@
 
 ## Synopsis
 
-This is how I have setup Vim on my Windows machine. Current setup is 
-mainly configured for Web Development. I'm also using these config files on a 
-Mac machine from time to time and it works as expected. I'll do my best to 
-keep things cross-platform.
+This is how I have setup Vim on my machine. Current setup is
+mainly configured for Web Development. I'm using these config files on Linux,
+Windows, and OS X from time to time and will do my best to keep things
+cross-platform.
 
-## Instructions
+## Instructions for Windows
 
 1.  Download and install `vim-x64` via [Chocolatey][1]
 2.  *[Optional]* Install [Link Shell Extension][2]
@@ -17,7 +17,7 @@ keep things cross-platform.
     required for python imports to work in **UltiSnip** snippets)
 4.  [Install Vundle][3] to **%USERPROFILE%\\.vim\bundle** (copy 
 	**misc/curl.cmd** to your git cmd directory, and skip editing **.vimrc**)
-5.  Install [this][4] patched **Source Code Pro** font
+5.  Install [this][4] patched **Liberation Mono** font
 6.  Download [HTML Tidy][5] and put it in your **PATH**
 7.  Download and install [LLVM][6]
 8.  Install [Microsoft Visual C++ Build Tools][7] (Install Windows 
@@ -39,7 +39,7 @@ keep things cross-platform.
 [1]: https://chocolatey.org/
 [2]: http://schinagl.priv.at/nt/hardlinkshellext/hardlinkshellext.html
 [3]: https://github.com/VundleVim/Vundle.vim/wiki/Vundle-for-Windows#git-on-windows
-[4]: https://github.com/powerline/fonts/tree/master/SourceCodePro
+[4]: https://github.com/powerline/fonts/tree/master/LiberationMono
 [5]: http://binaries.html-tidy.org/
 [6]: http://llvm.org/releases/download.html
 [7]: https://www.microsoft.com/en-us/download/details.aspx?id=49983
