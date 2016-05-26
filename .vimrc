@@ -1,3 +1,6 @@
+" plugins expect bash
+set shell=bash
+
 " Vundle config
 set nocompatible              " be iMproved, required
 filetype off                  " required
