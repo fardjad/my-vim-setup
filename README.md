@@ -32,6 +32,9 @@ cross-platform.
 13. [Run `npm install` in **%USERPROFILE%\.vim\bundle\tern\_for\_vim**][9]
 14. Copy/create a symlink to **misc/.tern-config** to/in your home directory.
 15. Install required binaries for **go-vim**: [`gvim +GoInstallBinaries`][10]
+16. [`npm install -g eslint@^2.0.0 eslint-config-standard eslint-plugin-standard eslint-plugin-promise`][11]
+17. [`npm install -g babel-eslint eslint-plugin-react`][12]
+18. Copy/create a symlink to **misc/.eslintrc** to/in your home directory.
 
 ## Linux Instructions
 
@@ -41,7 +44,7 @@ Follow the Windows instructions and use the package manager of your distro
 to install packages when applicable.
 
 The only gotcha is in **Arch Linux** (and maybe some other distros) you'll need
-to install [`libtinfo-5`][10] package for **YouCompleteMe** to work correctly.
+to install [`libtinfo-5`][12] package for **YouCompleteMe** to work correctly.
 
 ## License
 
@@ -49,15 +52,17 @@ This work is licensed under the Creative Commons Attribution-ShareAlike 4.0
 International License. To view a copy of this license, 
 visit http://creativecommons.org/licenses/by-sa/4.0/.
 
-[1]: https://chocolatey.org/
-[2]: http://schinagl.priv.at/nt/hardlinkshellext/hardlinkshellext.html
-[3]: https://github.com/VundleVim/Vundle.vim/wiki/Vundle-for-Windows#git-on-windows
-[4]: https://github.com/powerline/fonts/tree/master/LiberationMono
-[5]: http://llvm.org/releases/download.html
-[6]: https://www.microsoft.com/en-us/download/details.aspx?id=49983
-[7]: https://github.com/ramitos/jsctags#install
-[8]: https://github.com/Valloric/YouCompleteMe
-[9]: https://github.com/ternjs/tern_for_vim#manual
+[1]:  https://chocolatey.org/
+[2]:  http://schinagl.priv.at/nt/hardlinkshellext/hardlinkshellext.html
+[3]:  https://github.com/VundleVim/Vundle.vim/wiki/Vundle-for-Windows#git-on-windows
+[4]:  https://github.com/powerline/fonts/tree/master/LiberationMono
+[5]:  http://llvm.org/releases/download.html
+[6]:  https://www.microsoft.com/en-us/download/details.aspx?id=49983
+[7]:  https://github.com/ramitos/jsctags#install
+[8]:  https://github.com/Valloric/YouCompleteMe
+[9]:  https://github.com/ternjs/tern_for_vim#manual
 [10]: https://github.com/fatih/vim-go#install
-[11]: https://github.com/Valloric/YouCompleteMe/issues/778
+[11]: https://github.com/feross/eslint-config-standard#usage
+[12]: https://github.com/yannickcr/eslint-plugin-react#installation
+[13]: https://github.com/Valloric/YouCompleteMe/issues/778
 
