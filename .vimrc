@@ -21,7 +21,6 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'tpope/vim-surround'
 Plugin 'jlanzarotta/bufexplorer'
 Plugin 'scrooloose/syntastic'
-Plugin 'myint/syntastic-extras'
 Plugin 'vim-scripts/YankRing.vim'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-shell'
@@ -35,6 +34,8 @@ Plugin 'easymotion/vim-easymotion'
 Plugin 'takac/vim-hardtime'
 Plugin 'posva/vim-vue'
 Plugin 'sjl/vitality.vim' " OS X
+Plugin 'fatih/vim-go'
+Plugin 'mxw/vim-jsx'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -53,11 +54,6 @@ filetype plugin indent on    " required
 " ------------------------------------------------------------------------------
 
 " My config
-" http://www.bestofvim.com/tip/auto-reload-your-vimrc/
-augroup reload_vimrc " {
-  autocmd!
-  autocmd BufWritePost $MYVIMRC source $MYVIMRC
-augroup END " }
 
 " show the right margin
 set colorcolumn=80
@@ -162,22 +158,9 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 let g:syntastic_always_populate_loc_list=1
-let g:syntastic_auto_loc_list=0
+let g:syntastic_auto_loc_list=1
 let g:syntastic_check_on_open=1
 let g:syntastic_check_on_wq=0
-let g:syntastic_html_tidy_exec='tidy'
-" syntastic-extras
-let g:syntastic_c_checkers = ['check']
-let g:syntastic_cpp_checkers = ['check']
-let g:syntastic_cfg_checkers = ['cfg']
-let g:syntastic_dosini_checkers = ['dosini']
-let g:syntastic_make_checkers = ['gnumake']
-let g:syntastic_javascript_checkers = ['json_tool']
-let g:syntastic_gitcommit_checkers = ['language_check']
-let g:syntastic_svn_checkers = ['language_check']
-let g:syntastic_python_checkers = ['pyflakes_with_warnings']
-let g:syntastic_yaml_checkers = ['pyyaml']
-nnoremap ZZ :call syntastic_extras#quit_hook()<cr>
 
 " yankring
 nnoremap <silent> <F11> :YRShow<CR>
@@ -265,6 +248,35 @@ map <Leader>k <Plug>(easymotion-k)
 " vim-shell
 " Disable default mappings (https://github.com/xolox/vim-shell#the-gshell_mappings_enabled-option)
 let g:shell_mappings_enabled = 0
+
+" go-vim
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_interfaces = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
+" Enable goimports to automatically insert import paths 
+let g:go_fmt_command = "goimports"
+" Make go-vim and syntastic play nice
+let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
+let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
+let g:go_list_type = "quickfix"
+" go-vim key bindings
+au FileType go nmap <Leader>ds <Plug>(go-def-split)
+au FileType go nmap <Leader>dv <Plug>(go-def-vertical)
+au FileType go nmap <Leader>dt <Plug>(go-def-tab)
+au FileType go nmap <Leader>gd <Plug>(go-doc)
+au FileType go nmap <Leader>gv <Plug>(go-doc-vertical)
+au FileType go nmap <Leader>gb <Plug>(go-doc-browser)
+au FileType go nmap <leader>r <Plug>(go-run)
+au FileType go nmap <leader>b <Plug>(go-build)
+au FileType go nmap <leader>t <Plug>(go-test)
+au FileType go nmap <leader>c <Plug>(go-coverage)
+
+" vim-jsx
+" allow jsx in normal .js files
+let g:jsx_ext_required = 0
 
 " snippets
 " https://medium.com/brigade-engineering/sharpen-your-vim-with-snippets-767b693886db
