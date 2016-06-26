@@ -1,6 +1,3 @@
-" plugins expect bash
-set shell=bash
-
 " Vundle config
 set nocompatible              " be iMproved, required
 filetype off                  " required
@@ -36,6 +33,12 @@ Plugin 'posva/vim-vue'
 Plugin 'sjl/vitality.vim' " OS X
 Plugin 'fatih/vim-go'
 Plugin 'mxw/vim-jsx'
+Plugin 'mtscout6/syntastic-local-eslint.vim'
+Plugin 'djoshea/vim-autoread'
+Plugin 'tpope/vim-fugitive'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'jeffkreeftmeijer/vim-numbertoggle'
+Plugin 'terryma/vim-multiple-cursors'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -158,7 +161,7 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 let g:syntastic_always_populate_loc_list=1
-let g:syntastic_auto_loc_list=1
+let g:syntastic_auto_loc_list=0
 let g:syntastic_check_on_open=1
 let g:syntastic_check_on_wq=0
 " use eslint for javascript
@@ -185,7 +188,7 @@ set tags=.vimtags;,$HOME/.vim/.vimtags
 let g:easytags_file=$HOME.'/.vim/.vimtags'
 let g:easytags_dynamic_files=2
 let g:easytags_events=['BufWritePost']
-let g:easytags_async=0
+let g:easytags_async=1
 let g:easytags_resolve_links=1
 let g:easytags_include_members=1
 let g:easytags_languages={
@@ -213,11 +216,11 @@ let g:list_of_disabled_keys=['<UP>', '<DOWN>', '<LEFT>', '<RIGHT>']
 
 " quick resize (http://vim.wikia.com/wiki/Quick_window_resizing)
 " resize horzontal split window
-nmap <C-K> <C-W>-<C-W>-
-nmap <C-J> <C-W>+<C-W>+
+nmap <C-K> <C-W>-
+nmap <C-J> <C-W>+
 " resize vertical split window
-nmap <C-H> <C-W>><C-W>>
-nmap <C-L> <C-W><<C-W><
+nmap <C-H> <C-W>>
+nmap <C-L> <C-W><
 
 " clipboard
 if has('win32')
@@ -298,4 +301,7 @@ let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/UltiSnips']
 
 " Disable cursor blinking
 set guicursor+=a:blinkon0
+
+" NumberToggle
+let g:NumberToggleTrigger="<F3>"
 
