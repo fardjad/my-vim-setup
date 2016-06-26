@@ -54,7 +54,7 @@ visit http://creativecommons.org/licenses/by-sa/4.0/.
 [3]:  https://github.com/VundleVim/Vundle.vim/wiki/Vundle-for-Windows#git-on-windows
 [4]:  https://github.com/powerline/fonts/tree/master/LiberationMono
 [5]:  http://llvm.org/releases/download.html
-[6]:  https://www.microsoft.com/en-us/download/details.aspx?id=49983
+[6]:  http://landinghub.visualstudio.com/visual-cpp-build-tools
 [7]:  https://github.com/ramitos/jsctags#install
 [8]:  https://github.com/Valloric/YouCompleteMe
 [9]:  https://github.com/ternjs/tern_for_vim#manual
