@@ -305,3 +305,7 @@ set guicursor+=a:blinkon0
 " NumberToggle
 let g:NumberToggleTrigger="<F3>"
 
+" ctrlp
+let g:ctrlp_custom_ignore = {
+            \ 'dir':  '\v[\/](\.git|\.hg|\.svn|node_modules)$'
+            \ }
