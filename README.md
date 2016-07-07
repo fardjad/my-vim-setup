@@ -12,9 +12,7 @@ cross-platform.
 1.  Download and install `vim-x64` via [Chocolatey][1]
 2.  Install [Link Shell Extension][2]
 3.  Clone the repository and create symlinks to **.vimrc** and 
-    **.vim\** in your home directory. You will also need to create a 
-    symlink named **vimfiles** to **.vim\** in your home directory (this is 
-    required for python imports to work in **UltiSnip** snippets)
+    **.vim\** in your home directory.
 4.  [Install Vundle][3] to **%USERPROFILE%\.vim\bundle** (copy 
 	**misc/curl.cmd** to your git cmd directory, and skip editing **.vimrc**)
 5.  Install [this][4] patched **Liberation Mono** font

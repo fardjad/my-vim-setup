@@ -25,8 +25,6 @@ Plugin 'xolox/vim-easytags'
 Plugin 'majutsushi/tagbar'
 Plugin 'ternjs/tern_for_vim'
 Plugin 'Valloric/YouCompleteMe'
-Plugin 'SirVer/ultisnips'
-Plugin 'ervandew/supertab'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'takac/vim-hardtime'
 Plugin 'posva/vim-vue'
@@ -134,7 +132,7 @@ set encoding=utf-8 " also fixes powerline symbols on Windows
 " gui
 if has("gui_running")
   if has("gui_macvim")
-    set guifont=Liberation\ Mono\ for\ Powerline:h12
+    set guifont=Liberation\ Mono\ for\ Powerline:h13
   elseif has("gui_gtk2")
     set guifont=Liberation\ Mono\ for\ Powerline\ 12
   else
@@ -282,22 +280,6 @@ au FileType go nmap <leader>c <Plug>(go-coverage)
 " vim-jsx
 " allow jsx in normal .js files
 let g:jsx_ext_required = 0
-
-" snippets
-" https://medium.com/brigade-engineering/sharpen-your-vim-with-snippets-767b693886db
-" YouCompleteMe and UltiSnips compatibility, with the helper of supertab
-" (via http://stackoverflow.com/a/22253548/1626737)
-let g:SuperTabDefaultCompletionType = '<C-n>'
-let g:SuperTabCrMapping = 0
-let g:UltiSnipsExpandTrigger = '<tab>'
-let g:UltiSnipsJumpForwardTrigger = '<tab>'
-let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
-let g:ycm_key_list_select_completion = ['<C-j>', '<C-n>', '<Down>']
-let g:ycm_key_list_previous_completion = ['<C-k>', '<C-p>', '<Up>']
-
-" UltiSnip snippets directory
-let g:UltiSnipsSnippetsDir = $HOME.'/.vim/UltiSnips'
-let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/UltiSnips']
 
 " Disable cursor blinking
 set guicursor+=a:blinkon0
