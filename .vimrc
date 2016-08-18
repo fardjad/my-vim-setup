@@ -9,7 +9,6 @@ call vundle#begin('$HOME/.vim/bundle/')
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'pangloss/vim-javascript'
-Plugin 'bling/vim-airline'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'scrooloose/nerdtree'
 Plugin 'mattn/emmet-vim'
@@ -28,7 +27,6 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'takac/vim-hardtime'
 Plugin 'posva/vim-vue'
-Plugin 'sjl/vitality.vim' " OS X
 Plugin 'fatih/vim-go'
 Plugin 'mxw/vim-jsx'
 Plugin 'mtscout6/syntastic-local-eslint.vim'
@@ -37,6 +35,9 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'jeffkreeftmeijer/vim-numbertoggle'
 Plugin 'terryma/vim-multiple-cursors'
+Plugin 'jszakmeister/vim-togglecursor'
+Plugin 'millermedeiros/vim-statline'
+Plugin 'ntpeters/vim-better-whitespace'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -68,7 +69,7 @@ set guioptions-=T  "remove toolbar
 set guioptions-=r  "remove right-hand scroll bar
 set guioptions-=L  "remove left-hand scroll bar
 
-" disable the annoying bell 
+" disable the annoying bell
 set vb
 set t_vb=
 
@@ -89,10 +90,6 @@ set background=dark
 set t_Co=16
 colorscheme solarized
 
-" airline
-set laststatus=2
-let g:airline_powerline_fonts=1
-
 " file type specific settings
 au FileType javascript source $HOME/.vim/scripts/javascript.vim
 au FileType html source $HOME/.vim/scripts/html.vim
@@ -101,10 +98,6 @@ au FileType json source $HOME/.vim/scripts/json.vim
 " buffers
 " allow switching buffers without writing the changes
 set hidden
-" enable the list of buffers
-let g:airline#extensions#tabline#enabled=1
-" show just the filename
-let g:airline#extensions#tabline#fnamemod=':t'
 " easier buffer switching
 nnoremap <silent> <M-F12> :BufExplorer<CR>
 nnoremap <silent> <F12> :bn<CR>
@@ -131,16 +124,20 @@ set encoding=utf-8 " also fixes powerline symbols on Windows
 
 " gui
 if has("gui_running")
-  if has("gui_macvim")
-    set guifont=Liberation\ Mono\ for\ Powerline:h13
-  elseif has("gui_gtk2")
-    set guifont=Liberation\ Mono\ for\ Powerline\ 12
-  else
-    set guifont=Liberation Mono Powerline:h12
-  endif
-  " window size
-  set lines=43
-  set columns=132
+    " Disable cursor blinking
+    set guicursor+=a:blinkon0
+    set linespace=9
+    " window size
+    set lines=30
+    set columns=150
+    if has("gui_macvim")
+        set macligatures
+        set guifont=Fira\ Code:h14
+    elseif has("gui_gtk2")
+        set guifont=LiberationMono\ 12
+    else
+        set guifont=Liberation Mono Powerline:h14
+    endif
 endif
 
 " emmet
@@ -172,7 +169,7 @@ let g:yankring_replace_n_pkey=0
 let g:yankring_replace_n_nkey=0
 
 " fix backspace problems in Windows
-set backspace=indent,eol,start 
+set backspace=indent,eol,start
 
 " default indent settings
 set tabstop=4
@@ -222,11 +219,11 @@ nmap <C-L> <C-W><
 
 " clipboard
 if has('win32')
-  set clipboard=unnamed
+    set clipboard=unnamed
 elseif has('mac')
-  set clipboard=unnamed
+    set clipboard=unnamed
 elseif has('unix')
-  set clipboard=unnamedplus
+    set clipboard=unnamedplus
 endif
 
 " leader
@@ -258,7 +255,7 @@ let g:go_highlight_structs = 1
 let g:go_highlight_interfaces = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
-" Enable goimports to automatically insert import paths 
+" Enable goimports to automatically insert import paths
 let g:go_fmt_command = "goimports"
 " Make go-vim and syntastic play nice
 let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
@@ -280,9 +277,6 @@ au FileType go nmap <leader>c <Plug>(go-coverage)
 " allow jsx in normal .js files
 let g:jsx_ext_required = 0
 
-" Disable cursor blinking
-set guicursor+=a:blinkon0
-
 " NumberToggle
 let g:NumberToggleTrigger="<F3>"
 
@@ -290,3 +284,20 @@ let g:NumberToggleTrigger="<F3>"
 let g:ctrlp_custom_ignore = {
             \ 'dir':  '\v[\/](\.git|\.hg|\.svn|node_modules)$'
             \ }
+
+" statline
+let g:statline_fugitive = 1
+hi link User1 StatusLine
+hi link User2 StatusLine
+hi link User3 StatusLine
+hi link User4 StatusLine
+" greyscale statusline
+hi StatusLine ctermfg=0 ctermbg=10 gui=none guibg=#073642 guifg=#93a1a1
+hi StatusLineNC ctermfg=0 ctermbg=10 gui=none guifg=#657b83 guibg=#073642
+
+" togglecursor
+let g:togglecursor_default="block"
+let g:togglecursor_insert="line"
+let g:togglecursor_leave="block"
+let g:togglecursor_replace="underline"
+
