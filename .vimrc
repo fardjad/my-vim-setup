@@ -25,7 +25,6 @@ Plugin 'majutsushi/tagbar'
 Plugin 'ternjs/tern_for_vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'easymotion/vim-easymotion'
-Plugin 'takac/vim-hardtime'
 Plugin 'posva/vim-vue'
 Plugin 'fatih/vim-go'
 Plugin 'mxw/vim-jsx'
@@ -38,6 +37,7 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'jszakmeister/vim-togglecursor'
 Plugin 'millermedeiros/vim-statline'
 Plugin 'ntpeters/vim-better-whitespace'
+Plugin 'tpope/vim-vinegar'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -112,6 +112,7 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 map <C-_> :NERDTreeToggle<CR>
 " close vim if the only window left open is a NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+let NERDTreeHijackNetrw=0
 
 " paste
 " http://vim.wikia.com/wiki/Toggle_auto-indenting_for_code_paste
@@ -204,10 +205,6 @@ set completeopt-=preview
 
 " enable mouse
 set mouse=a
-
-" give my self such a hardtime ;-)
-let g:hardtime_default_on=1
-let g:list_of_disabled_keys=['<UP>', '<DOWN>', '<LEFT>', '<RIGHT>']
 
 " quick resize (http://vim.wikia.com/wiki/Quick_window_resizing)
 " resize horzontal split window
