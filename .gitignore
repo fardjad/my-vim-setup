@@ -1,15 +1,5 @@
 # Created by https://www.gitignore.io/api/vim,windows,osx,linux,dropbox
 
-### Vim ###
-[._]*.s[a-w][a-z]
-[._]s[a-w][a-z]
-*.un~
-Session.vim
-.netrwhist
-*~
-.vimtags
-
-
 ### Windows ###
 # Windows image file caches
 Thumbs.db
@@ -79,3 +69,12 @@ Temporary Items
 
 ### Python ###
 *.pyc
+
+### Custom ###
+# plugged
+.vim/autoload/plug.vim.old
+# history
+.vim/view
+.vim/.netrwhist
+# installed plugins
+.vim/plugged
